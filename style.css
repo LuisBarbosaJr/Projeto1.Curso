@@ -101,11 +101,18 @@ body *{
     left: 0;
     transform: translateY(-50%);
 
+    animation: slide-bac 0.2s;
+
 }
 
 .Claro #switch button{
-    left: initial;
-    right: 0;
+    animation: slide-in 0.2s forwards;
+    /*left: initial;
+    right: 0;*/
+}
+
+#switch button:hover{
+    outline: 8px solid var(--Link-Hover) ;
 }
 
 #switch span{
@@ -206,4 +213,22 @@ footer{
         --Tema-Fundo: url(./assets/bg-mobile-light.jpg);
     }
     
+}
+
+/* animation */
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+@keyframes slide-bac {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
