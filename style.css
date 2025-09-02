@@ -39,6 +39,7 @@ body{
     /* ATALHO OU SHORTHAND
     Agrupamento de comandos acima - Imagen, Repetição, Posição e Dimensão*/
     background: var(--Tema-Fundo) no-repeat top center/cover;
+    height: 100vh;
 }
 
 body *{
@@ -50,7 +51,8 @@ body *{
 
 /*Box de Edição*/
 #container {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     /*height: 712px; Autura Fluida */
     margin: 0px auto 0px;
     padding: 0 24px;
@@ -194,3 +196,14 @@ footer{
     font-size: 14px;
 }
     
+/* Media Queries */
+@media (min-width: 700px) {
+    :root {
+         --Tema-Fundo: url(./assets/bg-desktop.jpg);
+    }
+
+    .Claro {
+        --Tema-Fundo: url(./assets/bg-mobile-light.jpg);
+    }
+    
+}
