@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Troca de Tema*/
+:root{
+    --texto-cor : white;
+    --Tema-Fundo : url(./assets/bg-mobile.jpg);
+    --Borda-tema : rgba(255, 255, 255, 0.15) ;
+    --fundo-bot : rgba(255, 255, 255, 0.15);
+    --Link-Hover : rgba(255, 255, 255, 0.25);
+    --redes-hover : rgba(255, 255, 255, 0.2);
+    --Seletor-Tema : url(/assets/moon-stars.svg) ;
+
+}
+
+.Claro{
+    --texto-cor : black;
+    --Tema-Fundo : url(./assets/bg-mobile-light.jpg);
+    --Borda-tema : rgba(0, 0, 0, 0.15);
+    --fundo-bot : rgba(0, 0, 0, 0.15);
+    --Link-Hover : rgba(0, 0, 0, 0.20);
+    --redes-hover : rgba(0, 0, 0, 0.2);
+    --Seletor-Tema : url(/assets/sun.svg) ;
+
+}
+
+/* Corpo do Site*/
+body{
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /* ATALHO OU SHORTHAND
+    Agrupamento de comandos acima - Imagen, Repetição, Posição e Dimensão*/
+    background: var(--Tema-Fundo) no-repeat top center/cover;
+}
+
+body *{
+    font-family: "inter", sans-serif;
+    color: var(--texto-cor);
+
+    
+}
+
+/*Box de Edição*/
+#container {
+    width: 360px;
+    /*height: 712px; Autura Fluida */
+    margin: 0px auto 0px;
+    padding: 0 24px;
+
+}
+
+/* Perfil com Foto */
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+    
+    margin: auto;
+    border-radius: 50%;
+
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* Seletor de Tema */
+
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 0 auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--Seletor-Tema) no-repeat center;
+    border: 0px;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+
+.Claro #switch button{
+    left: initial;
+    right: 0;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--fundo-bot);
+    border: var(--Borda-tema);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+}
+/* Links */     
+
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    padding: 24px 0px;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    background: var(--fundo-bot);
+    border: 1px solid var(--Borda-tema);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+
+ul li a:hover{
+    background: var(--Link-Hover) ;
+    border: 1.5px solid var(--texto-cor);
+
+}
+
+
+/* Atalhos das redes sociais */
+#Redes-Sociais{
+    display: flex;
+    justify-content: center;
+
+    
+    padding: 24px 0px;
+
+    font-size: 24px;
+
+}
+
+#Redes-Sociais a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 16px;
+    border-radius: 50%;
+    
+}
+
+
+
+#Redes-Sociais a:hover{
+    transition: background 0.2s;
+    background: var(--redes-hover);
+    
+}
+
+/* Rodape */
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+    
